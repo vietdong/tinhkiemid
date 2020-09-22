@@ -1,0 +1,393 @@
+@font-face {
+    font-family: Zero;
+    src: url('SVN-Zero.ttf');
+  }
+  @font-face {
+    font-family: trajan;
+    src: url('trajan-pro-3_942.otf');
+  }
+
+.background{
+    background-color: #fff;
+}
+ul{
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none !important;
+}
+/* header */
+header{
+    position: relative;
+}
+.may{
+    position: absolute;
+    left: 30;
+    bottom: 0;
+    z-index: 100;
+}
+.may-2{
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+.nav{
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+.navbar{
+    background-color: unset !important;
+}
+.navbar-nav li{
+    background-image: url('img/21.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-nav li a{
+    font-family: trajan;
+    padding: 20px 20px !important;
+    font-size: 15px !important;
+}
+.navbar-nav li:nth-child(even){
+    background-image: url('img/20.png');
+}
+.navbar-nav li:nth-child(1){
+    background-image: url('img/home.png');
+}
+.navbar-nav li:last-child{
+    background-image: url('img/search.png');
+    position: relative;
+}
+.navbar-nav li:last-child .form-nav{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+}
+/* slide */
+.slide .view-1{
+    bottom: 12%;
+    margin: auto;
+}
+.slide .view-2{
+    left: unset;
+    right: 20%;
+    bottom: 15%;
+}
+.slide .view-3{
+    right: unset !important;
+    left: 20%;
+    bottom: 10%;
+}
+.slide .view-1 a img:hover, .slide .view-2 a img:hover, .slide .view-3 a img:hover {     
+    -webkit-filter: sepia(1);     
+    filter: sepia(1);
+}
+main{
+    background-image: url('img/2\ \(2\).png');
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    padding: 120px 0;
+    position: relative;
+    margin-top: -100px;
+    z-index: 99;
+}
+
+.main-left .option img{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.main-left .option img:hover{
+    -webkit-filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+    filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+}
+.maintenance-time .title{
+   background-image: url('img/18.png');
+   padding: 10px 0 10px 60px;
+   color: #fff;
+   font-family: Zero;
+}
+.maintenance-time .time{
+    font-family: Zero;
+    text-align: center;
+    padding: 10px;
+}
+.main-left .col-md-4{
+    padding-left: 0;
+}
+.content-left li:nth-child(1){
+    background:  url(img/a.png),url(img/7.png);
+    background-repeat: no-repeat,repeat-x;
+    background-size: 77px 77px,auto;
+    background-position: -20px,center;
+    line-height: 77px;
+    text-align: center;
+}
+.content-left li:nth-child(2){
+    background:  url(img/webp\ \(30\).png),url(img/7.png);
+    background-repeat: no-repeat,repeat-x;
+    background-size: 77px 77px,auto;
+    background-position: -20px,center;
+    line-height: 77px;
+    text-align: center;
+}
+.content-left li:nth-child(3){
+    background:  url(img/webp\ \(32\).png),url(img/7.png);
+    background-repeat: no-repeat,repeat-x;
+    background-size: 77px 77px,auto;
+    background-position: -20px,center;
+    line-height: 77px;
+    text-align: center;
+}
+.content-left li:nth-child(1):hover{
+    background:  url(img/a.png),url(img/11.png);
+    background-position: -20px,center;
+    background-repeat: no-repeat;
+}
+.content-left li:nth-child(2):hover{
+    background:  url(img/webp\ \(30\).png),url(img/11.png);
+    background-position: -20px,center;
+    background-repeat: no-repeat;
+}
+.content-left li:nth-child(3):hover{
+    background:  url(img/webp\ \(32\).png),url(img/11.png);
+    background-position: -20px,center;
+    background-repeat: no-repeat;
+}
+.content-left li:hover a{
+    color: #252525;
+}
+.content-left li a{
+    font-family: Zero;
+    color: #fff;
+}
+
+.content-1 {
+    padding-top: 10px;
+    position: relative;
+}
+.content-1 .title{
+    background-image:url('img/13.png') ;
+    padding: 10px 10px 10px 60px;
+    font-family: Zero;
+    color: #fff;
+}
+.content-1 .text{
+    margin-top: 30px;
+}
+.content-1 .text .date{
+    padding-left: 25px;
+    font-size: 12px;
+}
+h1{
+    color: #9d0f01;
+    font-size: 18px;
+    padding-left: 25px;
+}
+.content-1 .text p{
+    padding: 10px 10px 0px 40px;
+    font-size: 12px;
+}
+.date{
+    margin-top: -10px;
+    font-style: italic;
+    color: #000 !important;
+}
+.pp-left{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.pp-right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.content-1 ul li a h5{
+    font-size: 14px;
+    color: #9d0f01;
+}
+.content-1 ul{
+    border: 1px solid #a30000;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+}
+.content-1 ul li{
+    border-bottom: 1px solid #a30000;
+    padding: 10px 10px;
+}
+.content-1 ul li a{
+    font-size: 12px;
+}
+.content-1 ul li a:hover h5{
+    color: blue;
+}
+.content-2{
+    margin-top: 10px;
+}
+.content-2 .title{
+    /* background-color: #8c1100; */
+    background-image: url('img/8.png');
+    font-family: Zero;
+    color: #fff;
+    padding: 10px 0 !important;
+    text-align: center;
+}
+.content-2 p{
+    font-size: 12px;
+}
+.row{
+    margin: 0 !important;
+}
+.content-2 .col-md-7{
+    border-right: 10px solid #f5e5a1;
+    
+}
+.content-2 p{
+    padding: 20px 10px 0 30px;
+}
+.row .col-css{
+    padding: 0;
+}
+.content-2 ul{
+    padding: 0 20px;
+}
+.content-2 ul li{
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 50px;
+    font-size: 15px;
+}
+.content-2 ul li:nth-child(4){
+    background-position: 16px 20px;
+    border: 0;
+}
+
+.main-right .title{
+    background-image: url('img/8.png');
+    padding: 10px 0;
+    font-family: Zero;
+    padding-left: 30px;
+    color: #fff;
+}
+.main-right ul{
+    background-image: url('img/19.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -70px;
+    padding-bottom: 260px;
+}
+.main-right ul li{
+    padding: 0 10px 0 30px;
+}
+.main-right ul li:nth-child(1){
+    border-bottom: 1px solid #ccc;
+}
+.main-right ul li a{
+    background-repeat: no-repeat;
+    background-position: 0 20px;
+    line-height: 50px;
+    padding: 25px 0;
+    padding-left: 40px;
+    color: #000;
+    font-size: 15px;
+
+}
+footer{
+    background-image: url('img/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.down{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1300px) {
+   main{
+       margin-top: -93px;
+   }
+   .view-2{
+       right: 0 !important;
+       bottom: 15%;
+   }
+   .view-3{
+       bottom: 15% !important;
+   }
+   .view-1 img, .view-2 img, .view-3 img{
+       width: 125px;
+   }
+}
+.modal-body input{
+    width: 80%;
+}
+@media screen and (max-width: 600px) {
+   main{
+       margin-top: 0;
+       background-position: -700px -30px;
+       padding: 0;
+       background-size: cover;
+   }
+   header .container{
+       padding: 0;
+   }
+   .nav{
+       position: unset;
+       padding: 0;
+   }
+   .nav .col-md-12{
+       padding: 0;
+   }
+   .navbar-brand img{
+       width: 100px;
+   }
+   .navbar{
+       background-color: #ccc !important;
+   }
+   .navbar-nav li{
+       background-image: unset !important;
+   }
+   .navbar-nav li:nth-child(1),.navbar-nav li:last-child{
+       display: none;
+   }
+   .main-left .col-md-4{
+    padding: 0;
+    }
+    .main-left{
+        padding: 0;
+    }
+    .content-2 .col-md-7{
+        border: 0;
+    }
+    .content-1 {
+        margin-top: 15px;
+    }
+   .content-1 ul{
+       position: unset;
+   }
+    .title{
+       /* background-image: url('img/6.png'); */
+       text-align: center;
+       background-size: 80% auto;
+       padding: 10px 0 !important;
+       display: block;
+   }
+   .content-left li{
+       flex: 0 0 32.333333%;
+       width: 32.333333%;
+       display: inline-block;
+       line-height: 50px !important;
+       background-size: 50px 50px,auto !important;
+   }
+}
