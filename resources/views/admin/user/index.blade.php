@@ -26,9 +26,9 @@
             <td>{{$key}}</td>
             <td>{{$value->name}}</td>
             <td>{{$value->email}}</td>
-            <td>{{$value->server_id}}</td>
+            <td>{{$value->getServerName->name}}</td>
             <td>{{$value->phone}}</td>
-            <td>{{$value->active}}</td>
+            <td>{{$value->active == 1 ? 'Tài khoản đang sử dụng' : 'Tài khoản bị khoá'}}</td>
             <td>
             <form action="{{route('user.destroy',['user' => $value->id])}}" method="post">
             @method('delete')

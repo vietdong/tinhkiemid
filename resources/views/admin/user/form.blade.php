@@ -19,10 +19,10 @@
     <input type="" name="name" class="form-control" placeholder="Tên tài khoản" value="{{isset($model) ? $model->name : ''}}">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label for="exampleInputEmail1">Máy chủ</label>
     <select name="server_id" class="form-control">
         @foreach($server as $value)
-        <option>{{$value->name}}</option>
+        <option value="{{$value->id}}">{{$value->name}}</option>
         @endforeach
     </select>
   </div>

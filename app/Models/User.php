@@ -16,6 +16,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $with = ['getServerName'];
     protected $fillable = [
         'name', 'email', 'password','level','full_name','phone','address','password2','gender','image','active','server_id','secret_question_id','answer','referral_code'
     ];
@@ -37,4 +38,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function getServerName()
+    {
+        return $this->hasOne('App\Models\Server', 'id','server_id');
+    }
 }
