@@ -12,7 +12,7 @@ class HomeController extends Controller
         $this->postRepository  = $postRepository;
     }
     public function index(){
-        $post = $this->postRepository->orderBy('id', 'DESC')->first();
-        return view('homepage.index',compact('post'));
+        // $post = $this->postRepository->orderBy('id', 'DESC')->first();
+        return view('homepage.index');
     }
 }

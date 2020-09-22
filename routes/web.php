@@ -65,5 +65,5 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'is_admin'], function(){
 //trang home 
 
 Route::group(['prefix' => 'home', 'middleware' => 'toggle_client'], function(){
-    Route::get('/', 'App\Http\Controllers\HomeController@index')->name('login');
+    Route::get('/', 'App\Http\Controllers\HomeController@index');
 });
