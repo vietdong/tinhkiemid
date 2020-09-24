@@ -46,4 +46,16 @@ class ConfigController extends Controller
         $model = $this->list_config;
     	return view('admin.config.linh_event',compact('model'));
     }
+    function accountManager(){
+        $model = $this->list_config;
+    	return view('admin.config.accountManager',compact('model'));
+    }
+    function rechargeManager(){
+        $model = $this->list_config;
+    	return view('admin.config.rechargeManager',compact('model'));
+    }
+    function characterManager(){
+        $model = $this->list_config;
+    	return view('admin.config.characterManager',compact('model'));
+    }
 }

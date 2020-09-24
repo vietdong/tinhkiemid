@@ -44,24 +44,6 @@
                         <!-- end feature box -->
 
                         <!-- end feature box -->
-                        <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(22)">
-                            <div class="margin-ten-bottom">
-                                <a>
-                                    <img alt="" src="{{asset('asset/inside/img/sellnhanvat.png')}}" data-selector="img"></a>
-                                <input type="submit" name="ctl00$Noidung$butviewsellnhanvat" value="" id="Noidung_butviewsellnhanvat" style="display: none;">
-                            </div>
-                            <a class="text-tilte">Bán nhân vật</a>
-                        </div>
-                        <!-- end feature box -->
-                        <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(25)">
-                            <div class="margin-ten-bottom">
-                                <a>
-                                    <img alt="" src="{{asset('asset/inside/img/buynhanvat.png')}}" data-selector="img"></a>
-                                <input type="submit" name="ctl00$Noidung$butviewareadysell" value="" id="Noidung_butviewareadysell" style="display: none;">
-                            </div>
-                            <a class="text-tilte">Nhân vật đang rao bán</a>
-                        </div>
-                        <!-- end feature box -->
                         <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(18)">
                             <div class="margin-ten-bottom">
                                 <a>

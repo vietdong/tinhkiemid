@@ -25,7 +25,7 @@
                         <form action="{{route('question.destroy',['question' => $value->id])}}" method="post">
                         @method('delete')
                         @csrf
-                          <button class="btn btn-default" type="submit">Xoá</button>
+                          <button class="btn btn-default" type="submit" onclick="return confirm('Bạn có muốn xoá câu hỏi không ?');">Xoá</button>
                       </form>
                     </td>
                       <td><a href="{{route('question.edit',['question' => $value->id])}}">Edit</a></td>

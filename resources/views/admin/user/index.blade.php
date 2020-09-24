@@ -33,7 +33,7 @@
             <form action="{{route('user.destroy',['user' => $value->id])}}" method="post">
             @method('delete')
             @csrf
-                <button class="btn btn-default" type="submit">Xoá</button>
+                <button class="btn btn-default" type="submit" onclick="return confirm('Bạn có muốn xoá thành viên không ?');">Xoá</button>
             </form>
         </td>
             <td><a href="{{route('user.edit',['user' => $value->id])}}">Edit</a></td>

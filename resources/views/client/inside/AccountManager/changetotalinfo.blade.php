@@ -11,7 +11,30 @@
                     <div class="alert alert-danger" role="alert" id="success_message">
                         <b>Chú ý: Điền thông tin vào các danh mục bạn muốn thay đổi/Cập nhật. Có thể để trống nếu giữ nguyên thông tin tài khoản cũ.</b>
                     </div>
-
+                    @if ($errors->any())
+						<div class="col-12">
+							<div class="alert alert-danger alert-dismissible show" role="alert" style="text-align:left">
+								<ul>
+									@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+									@endforeach
+								</ul>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+					@endif
+                    @if(session('check'))
+                    <div class="col-12">
+                     <div class="alert alert-danger alert-dismissible show" role="alert">
+                           <strong>{{session('check')}}</strong>
+                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
+                     </div>
+                    </div>
+                    @endif
                     <div class="form-group margin">
                         Tên tài khoản:
                         <input name="name" type="text" placeholder="" disabled="disabled" class="form-control" value="{{Auth::user()->name}}">
@@ -19,27 +42,27 @@
 
                     <div class="form-group margin">
                         Mật khẩu mới:
-                        <input name="password_old" type="password" placeholder="(Nhập mật khẩu mới nếu muốn thay đổi)" class="form-control">
+                        <input name="password" type="password" placeholder="(Nhập mật khẩu mới nếu muốn thay đổi)" class="form-control" value="{{ old('password') }}">
                     </div>
 
                     <div class="form-group margin">
                         Nhập lại mật khẩu mới:
-                        <input name="password" type="password" placeholder="(Nhập mật khẩu mới nếu muốn thay đổi)" class="form-control">
+                        <input name="password_confirm" type="password" placeholder="(Nhập mật khẩu mới nếu muốn thay đổi)" class="form-control" value="{{ old('password_confirm') }}">
                     </div>
 
                     <div class="form-group margin">
                         Số điện thoại mới:
-                        <input name="password_new" type="text" placeholder="(Nhập số điện thoại mới nếu muốn thay đổi)" class="form-control">
+                        <input name="password_new" type="text" placeholder="(Nhập số điện thoại mới nếu muốn thay đổi)" class="form-control" value="{{ old('phone') }}">
                     </div>
 
                     <div class="form-group margin">
                         Email mới:
-                        <input name="email" type="text" placeholder="(Nhập email mới nếu muốn thay đổi)" class="form-control">
+                        <input name="email" type="text" placeholder="(Nhập email mới nếu muốn thay đổi)" class="form-control" value="{{ old('email') }}">
                     </div>
 
                     <div class="form-group margin">
                         Số CMND mới:
-                        <input name="cnnd" type="text" placeholder="(Nhập CMT mới nếu muốn thay đổi)" class="form-control">
+                        <input name="cnnd" type="text" placeholder="(Nhập CMT mới nếu muốn thay đổi)" class="form-control" value="{{ old('cmnd') }}">
                     </div>
                     <br>
 

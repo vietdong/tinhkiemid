@@ -51,7 +51,7 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Trang ID
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -65,6 +65,17 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Câu hỏi bí mật</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('figure.index')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Nhân vật</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Trang chủ
+      </div>
       <li class="nav-item">
         <a class="nav-link" href="{{route('category.index')}}">
           <i class="fas fa-fw fa-table"></i>
@@ -100,6 +111,9 @@
             <a class="collapse-item" href="{{route('config')}}">Cấu hình chung</a>
             <a class="collapse-item" href="{{route('slide')}}">Slide</a>
             <a class="collapse-item" href="{{route('link.event')}}">Linh sự kiện</a>
+            <a class="collapse-item" href="{{route('config.account.manager')}}">Nạp thẻ</a>
+            <a class="collapse-item" href="{{route('config.recharge.manager')}}">Quản lý tài khoản</a>
+            <a class="collapse-item" href="{{route('config.character.manager')}}">Quản lý nhân vật</a>
           </div>
         </div>
       </li>
@@ -185,10 +199,6 @@
         <a class="dropdown-item" href="#">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
           Settings
-        </a>
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-          Activity Log
         </a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">

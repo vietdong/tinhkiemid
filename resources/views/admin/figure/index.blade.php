@@ -3,7 +3,7 @@
 
 <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Danh mục</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Danh sách nhân vật</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -12,23 +12,23 @@
                     <tr>
                       <th>STT</th>
                       <th>Name</th>
-                      <th colspan='2'><a href="{{route('category.create')}}">Thêm</a></th>
+                      <th colspan='2'><a href="{{route('figure.create')}}">Thêm</a></th>
 
                     </tr>
                   </thead>
                   <tbody>
-                      @foreach($cate as $key => $value)
+                      @foreach($figure as $key => $value)
                     <tr>
                       <td>{{$key}}</td>
                       <td>{{$value->name}}</td>
                       <td>
-                        <form action="{{route('category.destroy',['category' => $value->id])}}" method="post">
+                        <form action="{{route('figure.destroy',['figure' => $value->id])}}" method="post">
                         @method('delete')
                         @csrf
-                          <button class="btn btn-default" type="submit" onclick="return confirm('Bạn có muốn xoá danh mục không ?');">Xoá</button>
+                          <button class="btn btn-default" type="submit" onclick="return confirm('Bạn có muốn xoá máy chủ không ?');">Xoá</button>
                       </form>
                     </td>
-                      <td><a href="{{route('category.edit',['category' => $value->id])}}">Edit</a></td>
+                      <td><a href="{{route('figure.edit',['figure' => $value->id])}}">Edit</a></td>
                     </tr>
                     @endforeach
                   </tbody>
@@ -36,4 +36,4 @@
               </div>
             </div>
           </div>
-@endsection
+          @endsection

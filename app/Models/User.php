@@ -18,7 +18,7 @@ class User extends Authenticatable
      */
     protected $with = ['getServerName'];
     protected $fillable = [
-        'name', 'email', 'password','level','full_name','phone','address','password2','gender','image','active','server_id','secret_question_id','answer','referral_code'
+        'name', 'email', 'password','level','full_name','phone','address','password2','gender','image','active','server_id','secret_question_id','answer','referral_code','cmnd','otp'
     ];
     protected $dates = ['deleted_at'];
     /**

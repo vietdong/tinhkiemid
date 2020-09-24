@@ -25,7 +25,7 @@
                         <form action="{{route('server.destroy',['server' => $value->id])}}" method="post">
                         @method('delete')
                         @csrf
-                          <button class="btn btn-default" type="submit">Xoá</button>
+                          <button class="btn btn-default" type="submit" onclick="return confirm('Bạn có muốn xoá máy chủ không ?');">Xoá</button>
                       </form>
                     </td>
                       <td><a href="{{route('server.edit',['server' => $value->id])}}">Edit</a></td>
