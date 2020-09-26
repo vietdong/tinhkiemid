@@ -18,7 +18,9 @@
 
 </select>
                     </div>
-                    
+                    <div class="form-group margin">
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
+                    </div>
                     <!-- Mật khẩu-->
                     <div id="Noidung_panelchangequestgooglecode">
 	

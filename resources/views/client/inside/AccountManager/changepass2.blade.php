@@ -40,6 +40,9 @@
                             <input name="answer" type="text" placeholder="Nhập câu trả lời bí mật" class="form-control">
                         </div>
                 </div>
+                   <div class="form-group margin">
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
+                    </div>
                     <!-- Mật khẩu -->
                     <div class="form-group margin">
                         <input name="password2" type="password" id="Noidung_txtpass2moi" placeholder="Nhập mật khẩu cấp 2 mới" class="form-control">

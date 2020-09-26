@@ -15,8 +15,8 @@
 
 <input type="hidden" value="{{isset($model) ? $model->id : ''}}" name="id">
   <div class="form-group">
-    <label for="exampleInputEmail1">Tên máy chủ</label>
-    <input type="" name="name" class="form-control" placeholder="Tên máy chủ" value="{{isset($model) ? $model->name : ''}}">
+    <label for="exampleInputEmail1">Tên nhân vật</label>
+    <input type="" name="name" class="form-control" placeholder="Tên nhân vât" value="{{isset($model) ? $model->name : ''}}">
   </div>
   <button type="submit" class="btn btn-primary">Lưu</button>
   <a href="{{route('figure.index')}}" class="btn btn-secondary">Trở về</a>

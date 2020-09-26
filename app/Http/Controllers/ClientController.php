@@ -39,8 +39,17 @@ class ClientController extends Controller
     public function getInfo(){
         return view('client.external.getinfo');
     }
-    public function lostPassByInfo(){
-        return view('client.external.lostpassbyinfo');
+    public function lostPassByInfo(Request $request){
+        if($request->all()){
+            $user = $this->userRepository->where('id',1)->get();
+            dd($user);
+            if($user){
+                        
+            }
+        }
+        $server =  $this->serverRepository->getAll();
+        $secret_question = $this->secretQuestionRepository->getAll();
+        return view('client.external.lostpassbyinfo',compact('server','secret_question'));
     }
     public function lostPassByMail(){
         return view('client.external.lostpassbymail');

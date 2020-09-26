@@ -12,11 +12,7 @@
                     </div>
 
                     <div class="form-group margin">
-                        <select  class="form-control">
-	<option selected="selected" value="Sử Dụng Thông Tin Tài Khoản">Sử Dụng Thông Tin Tài Khoản</option>
-	<option value="Sử Dụng OTP">Sử Dụng OTP</option>
-
-</select>
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
                     </div>
                     
                     <!-- Mật khẩu-->
@@ -30,17 +26,17 @@
 	                   </select>
                         </div>
                         <div class="form-group margin">
-                            <input name="answer" type="text" id="Noidung_txtchangecmtcautraloi" placeholder="Nhập câu trả lời bí mật" class="form-control">
+                            <input name="answer" type="text" placeholder="Nhập câu trả lời bí mật" class="form-control">
                         </div>
                     
 </div>
                     <!-- Mật khẩu -->
                     <div class="form-group margin">
-                        <input name="cmnd" type="text" id="Noidung_txtchangecmtsocmtnd" placeholder="Nhập số CMTND mới" class="form-control">
+                        <input name="cmnd" type="text"  placeholder="Nhập số CMTND mới" class="form-control">
                     </div>
 
                     <div class="form-group margin">
-                        <input name="cmnd_confirmation" type="text" id="Noidung_txtchangecmtsocmtndagian" placeholder="Nhập lại số CMTND mới" class="form-control">
+                        <input name="cmnd_confirmation" type="text" placeholder="Nhập lại số CMTND mới" class="form-control">
                     </div>
                     <!-- Mật khẩu -->
 

@@ -9,7 +9,7 @@
                 <div class="form-horizontal background-form" id="contact_form">
 
                     <div class="alert alert-danger" role="alert" id="success_message">
-                        <center>Bạn có thể sử dụng 1 trong 2 cách để đổi mật khẩu<br>Sử dụng <b>OTP SMS</b> hoặc sử dụng <b>Mật Khẩu Cấp 2</b><br>Mỗi ngày bạn có thể nhận 1 OTP SMS miễn phí (không cộng dồn tích lũy theo ngày).<br>Phí mỗi lần lấy mã OTP tiếp theo là 1000 Đồng ưu tiên Đồng Khuyến Mại</center>
+                        <center>Bạn có thể sử dụng mã OTP để đổi mật khẩu</center>
                     </div>
                     @if ($errors->any())
 						<div class="col-12">
@@ -44,8 +44,10 @@
                     </div>
                     
                     <!-- Mật khẩu-->
-                    <div id="Noidung_panel1">
-	
+                    <div class="form-group margin">
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
+                    </div>
+                    <div class="password2">
                         <div class="form-group margin">
                             <input name="password2" type="password" placeholder="Nhập vào mật khẩu cấp 2" class="form-control" value="{{ old('password2') }}">
                         </div>

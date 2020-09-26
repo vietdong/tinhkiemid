@@ -8,19 +8,24 @@ use App\Repositories\SecretQuestionRepository;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Repositories\ConfigRepository;
 class AccountManagerController extends Controller
 {
     protected $userRepository;
     protected $secretQuestionRepository;
     protected $pathForder;
-    public function __construct(UserRepository $userRepository,SecretQuestionRepository $secretQuestionRepository)
+    protected $configRepository;
+    public function __construct(UserRepository $userRepository,SecretQuestionRepository $secretQuestionRepository,ConfigRepository $configRepository)
     {
         $this->userRepository = $userRepository;
         $this->secretQuestionRepository = $secretQuestionRepository;
+        $this->configRepository = $configRepository;
         $this->pathForder = 'client.inside.AccountManager';
     }
     public function index(){
-         
+         if($this->configRepository->getConfig()['account']['value'] == 0){
+            return view('client.inside.maintenance');
+         }
          return view($this->pathForder.'.accountmanager');
     }
     public function changeTotalInfo(Request $request){

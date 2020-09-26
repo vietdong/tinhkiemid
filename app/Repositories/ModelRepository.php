@@ -100,7 +100,6 @@ abstract class ModelRepository
 
         return false;
     }
-
 }
 
 ?>

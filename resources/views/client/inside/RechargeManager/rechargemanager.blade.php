@@ -9,25 +9,25 @@
       <div class="row four-column" id="section02">
          <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(100)">
             <div class="margin-ten-bottom">
-               <a>
+               <a href="{{route('zalo.pay')}}">
                <img alt="" src="{{asset('asset/inside/img/credit-card.png')}}" data-selector="img"></a>
-               <input type="submit" name="ctl00$Noidung$butthecao" value="" id="Noidung_butthecao" class="btn btn-primary mb-2 opt" style="display: none;">
+              
             </div>
-            <a class="text-tilte">Sử dụng Thẻ Cào</a>
+            <a href="{{route('zalo.pay')}}" class="text-tilte">Sử dụng Thẻ Cào</a>
          </div>
          <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(34)">
             <div class="margin-ten-bottom">
-               <a>
+               <a href="{{route('zalo.pay')}}">
                <img alt="" src="{{asset('asset/inside/img/zalopay1.png')}}" data-selector="img"></a>
-               <input type="submit" name="ctl00$Noidung$butzolopay" value="" id="Noidung_butzolopay" class="btn btn-primary mb-2 opt" style="display: none;">
+              
             </div>
-            <a class="text-tilte">Sử dụng Zalo Pay</a>
+            <a href="{{route('zalo.pay')}}" class="text-tilte">Sử dụng Zalo Pay</a>
          </div>
          <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(35)">
             <div class="margin-ten-bottom">
                <a>
                <img alt="" src="{{asset('asset/inside/img/295384.png')}}" data-selector="img"></a>
-               <input type="submit" name="ctl00$Noidung$butnapquaapp" value="" id="Noidung_butnapquaapp" class="btn btn-primary mb-2 opt" style="display: none;">
+              
             </div>
             <a class="text-tilte">Sử dụng App Thien Long Tinh Kiem</a>
          </div>

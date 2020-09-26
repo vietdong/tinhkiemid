@@ -4,19 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Config;
 use Illuminate\Http\Request;
-
+use App\Repositories\ConfigRepository;
 class ConfigController extends Controller
 {
     public $list_config;
-    public function __construct()
+    public function __construct(ConfigRepository $configRepository)
     {
-        $key = Config::all();
-    	$model = [];
-    	foreach ($key as $key => $value) {
-    		$model[$value->keys]['key'] =$value->keys;
-    		$model[$value->keys]['value'] =$value->value;
-    	}
-        $this->list_config = $model;
+    
+        $this->list_config = $configRepository->getConfig();
     }
 
     function config(){

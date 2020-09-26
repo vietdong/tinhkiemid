@@ -54,6 +54,24 @@ class PostController extends Controller
                     $fileName = '';
                 }
             }
+            // if($rq->hasFile('image')) {
+            //     foreach($rq->file('image') as $image) {
+            //         $filenameWithExt = $image->getClientOriginalName();
+            //         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //         $extension = $image->getClientOriginalExtension();
+             
+            //         $fileNameToStore = $filename.'_'.time().'.'.$extension;
+                    
+            //         $image->storeAs('public/image', $fileNameToStore);
+             
+            //         $image = new ProductImages([
+            //             'content_id' => $model->id,
+            //             'path' => $fileNameToStore,
+            //         ]);
+                    
+            //         $image->save();
+            //     }
+            // }
             $input = [
                 'title'=> $request->title,
                 'slug' => $this->postRepository->slug($request->title),

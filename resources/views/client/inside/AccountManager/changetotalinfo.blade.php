@@ -39,7 +39,9 @@
                         Tên tài khoản:
                         <input name="name" type="text" placeholder="" disabled="disabled" class="form-control" value="{{Auth::user()->name}}">
                     </div>
-
+                    <div class="form-group margin">
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
+                    </div>
                     <div class="form-group margin">
                         Mật khẩu mới:
                         <input name="password" type="password" placeholder="(Nhập mật khẩu mới nếu muốn thay đổi)" class="form-control" value="{{ old('password') }}">

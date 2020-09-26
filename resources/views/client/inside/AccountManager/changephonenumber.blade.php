@@ -19,7 +19,9 @@
                     @endif
                     <div >
                         <!-- Mật khẩu-->
-
+                        <div class="form-group margin">
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
+                    </div>
                         <!-- Mật khẩu -->
                         <div class="form-group margin">
                             <input  type="text" class="form-control" name="phone" placeholder="Nhập số điện thoại mới" >

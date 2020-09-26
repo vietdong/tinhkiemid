@@ -22,12 +22,13 @@ Route::group(['prefix' => '/', 'middleware' => 'toggle_client'], function(){
     Route::get('logout', 'App\Http\Controllers\ClientController@logout')->name('logout');
     Route::get('forgotpassword', 'App\Http\Controllers\ClientController@forgotpassword')->name('forgotpassword');
     Route::get('get-info', 'App\Http\Controllers\ClientController@getInfo')->name('get.info');
-    Route::get('lost-pass-by-info', 'App\Http\Controllers\ClientController@lostPassByInfo')->name('lost.pass.by.info');
-    Route::get('lost-pass-by-mail', 'App\Http\Controllers\ClientController@lostPassByMail')->name('lost.pass.by.mail');
+    Route::any('lost-pass-by-info', 'App\Http\Controllers\ClientController@lostPassByInfo')->name('lost.pass.by.info');
+    Route::any('lost-pass-by-mail', 'App\Http\Controllers\ClientController@lostPassByMail')->name('lost.pass.by.mail');
     
     Route::group(['prefix' => 'dashboard', 'middleware' => 'is_client'], function(){
         Route::prefix('recharge-manager')->group(function (){
             Route::get('/','App\Http\Controllers\RechargeManagerController@index')->name('recharge.manager');
+            Route::get('ZaloPay','App\Http\Controllers\RechargeManagerController@zaLoPay')->name('zalo.pay');
         });
         Route::prefix('account-manager')->group(function (){
             Route::get('/','App\Http\Controllers\AccountManagerController@index')->name('account.manager');
@@ -44,6 +45,7 @@ Route::group(['prefix' => '/', 'middleware' => 'toggle_client'], function(){
         });
         Route::prefix('character-manager')->group(function (){
             Route::get('/','App\Http\Controllers\CharacterManagerController@index')->name('character.manager');
+            
         });
     });
 });

@@ -8,7 +8,7 @@
                 <div class="form-horizontal background-form" >
 
                     <div class="alert alert-danger" role="alert" id="success_message">
-                        <center>Bạn có thể sử dụng 1 trong 2 cách để đổi Email<br>Sử dụng <b>OTP SMS</b> hoặc sử dụng mã <b>Google Authenticator</b><br>Mỗi ngày bạn có thể nhận 1 OTP SMS miễn phí (không cộng dồn tích lũy theo ngày)<br>Phí mỗi lần lấy mã OTP tiếp theo là 1000 Đồng ưu tiên Đồng Khuyến Mại</center>
+                        <center>Bạn có thể sử dụng mã OTP để đổi email</center>
                     </div>
                     @if(session('check'))
                     <div class="col-12">
@@ -21,11 +21,7 @@
                     </div>
                     @endif
                     <div class="form-group margin">
-                        <select  class="form-control">
-	<option selected="selected" value="Sử Dụng Google Authenticator">Sử Dụng Google Authenticator</option>
-	<option value="Sử Dụng OTP">Sử Dụng OTP</option>
-
-</select>
+                        <input name="otp" type="text" placeholder="Mã OTP" class="form-control">
                     </div>
                     
                     <!-- Mật khẩu-->
