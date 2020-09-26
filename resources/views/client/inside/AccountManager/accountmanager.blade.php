@@ -52,14 +52,14 @@
                                     <a href="{{route('lost.phone')}}" class="text-tilte">Hỗ trợ mất số điện thoại</a>
                                  </div>
                                  <!-- end feature box -->
-                                 <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(10)">
+                                 <!-- <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(10)">
                                     <div class="margin-ten-bottom">
                                        <a href="{{route('register.google.auth')}}">
                                        <img alt="" src="{{asset('asset/inside/icon-4.png')}}" data-selector="img"></a>
                                     
                                     </div>
                                     <a href="{{route('register.google.auth')}}" class="text-tilte">Đăng kí mã Google Authenticator</a>
-                                 </div>
+                                 </div> -->
                                  <!-- end feature box -->
                                  <!-- end feature box -->
                                  <div class="col-md-3 col-sm-6 col-xs-12 text-center placeholder" onclick="CallServerMethod(9)">

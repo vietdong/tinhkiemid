@@ -22,7 +22,17 @@ class AccountManagerController extends Controller
         $this->configRepository = $configRepository;
         $this->pathForder = 'client.inside.AccountManager';
     }
+    public function checkOtp($otp){
+        if(isset($opt)){
+            $check_otp = $this->userRepository->getModel()::where('opt',$request->otp)->get();
+            if($check_otp){
+                return true;
+            }
+        }
+        return false;
+    }
     public function index(){
+        
          if($this->configRepository->getConfig()['account']['value'] == 0){
             return view('client.inside.maintenance');
          }
@@ -30,10 +40,10 @@ class AccountManagerController extends Controller
     }
     public function changeTotalInfo(Request $request){
         
-        
         if($request->all()){
-            
-
+            if(!$this->checkOtp($request->otp)){
+                return redirect()->route('change.total.info')->with('check',"Mã OTP không đúng!");
+            }
             $list_value = [];
             if($request->email){
                 array_push($list_value,'email');
@@ -76,6 +86,9 @@ class AccountManagerController extends Controller
    }
    public function changePass(Request $request){
     if($request->all()){
+        if(!$this->checkOtp($request->otp)){
+            return redirect()->route('change.pass')->with('check',"Mã OTP không đúng!");
+        }
         if (Hash::check($request->password2, Auth::user()->password2)) {
            
         
@@ -111,8 +124,12 @@ class AccountManagerController extends Controller
    }
    public function changePass2(Request $request){
       if($request->all()){
-        $user = $this->userRepository->where('secret_question_id',$request->question)->where('answer',$request->answer)->get();
+        if(!$this->checkOtp($request->otp)){
+            return redirect()->route('change.pass2')->with('check',"Mã OTP không đúng!");
+        }
+        $user = $this->userRepository->getModel()::where('secret_question_id',$request->question)->where('answer',$request->answer)->get();
         if($user){
+
             $input = [
                 'password2' =>bcrypt($request->password2),
             ];
@@ -127,6 +144,9 @@ class AccountManagerController extends Controller
    }
    public function changePhone(Request $request){
         if($request->all()){
+            if(!$this->checkOtp($request->otp)){
+                return redirect()->route('change.phone')->with('check',"Mã OTP không đúng!");
+            }
             $input = [
                 'phone' =>$request->phone,
             ];
@@ -143,6 +163,9 @@ class AccountManagerController extends Controller
    }
    public function changeEmail(Request $request){
     if($request->all()){
+        if(!$this->checkOtp($request->otp)){
+            return redirect()->route('change.email')->with('check',"Mã OTP không đúng!");
+        }
         $input = [
             'email' =>$request->email,
         ];
@@ -153,6 +176,9 @@ class AccountManagerController extends Controller
    }
    public function changeQuestion(Request $request){
     if($request->all()){
+        if(!$this->checkOtp($request->otp)){
+            return redirect()->route('change.question')->with('check',"Mã OTP không đúng!");
+        }
         $input = [
             'secret_question_id' => $request->question,
             'answer' => $request->answer,
@@ -165,6 +191,9 @@ class AccountManagerController extends Controller
    }
    public function changeCMT(Request $request){
     if($request->all()){
+        if(!$this->checkOtp($request->otp)){
+            return redirect()->route('change.question')->with('check',"Mã OTP không đúng!");
+        }
         $user = $this->userRepository->where('secret_question_id',$request->question)->where('answer',$request->answer)->get();
         if($user){
             $input = [
@@ -175,10 +204,12 @@ class AccountManagerController extends Controller
         }else{
             return redirect()->route('change.email')->with('check',"Câu hỏi bí mật chưa đúng!");  
         }
+        $question = $this->secretQuestionRepository->getAll();
+
         
     }
     $question = $this->secretQuestionRepository->getAll();
-    return view($this->pathForder.'.ChangeCMT');
+    return view($this->pathForder.'.ChangeCMT',compact('question'));
    }
    public function showInfo(){
     return view($this->pathForder.'.ShowInfo');
