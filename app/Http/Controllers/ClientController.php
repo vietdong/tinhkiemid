@@ -41,8 +41,14 @@ class ClientController extends Controller
     }
     public function lostPassByInfo(Request $request){
         if($request->all()){
-            $user = $this->userRepository->where('id',1)->get();
-            dd($user);
+    
+            $user = $this->userRepository->getModel()::where([
+                ['server_id',$request->server],
+                ['name',$request->name],
+                ['secret_question_id',$request->question],
+                ['answer',$request->answer]
+            ])->get();
+
             if($user){
                         
             }

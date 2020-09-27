@@ -7,9 +7,6 @@
 
                 <div class="form-horizontal background-form" id="contact_form">
 
-                    <div class="alert alert-danger" role="alert" id="success_message">
-                        <center>Bạn có thể sử dụng 1 trong 2 cách để đổi mật khẩu cấp 2<br>Sử dụng <b>OTP SMS</b> hoặc sử dụng <b>Câu Hỏi - Câu Trả Lời Bí Mật</b><br>Mỗi ngày bạn có thể nhận 1 OTP SMS miễn phí (không cộng dồn tích lũy theo ngày)<br>Phí mỗi lần lấy mã OTP tiếp theo là 1000 Đồng ưu tiên Đồng Khuyến Mại</center>
-                    </div>
                     @if(session('check'))
                     <div class="col-12">
                      <div class="alert alert-danger alert-dismissible show" role="alert">
@@ -26,7 +23,6 @@
                             <option value="Sử Dụng OTP">Sử Dụng OTP</option>
                         </select>
                     </div>
-                    
                     <!-- Mật khẩu-->
                     <div id="Noidung_panelpass2tttk">
                         <div class="form-group margin">

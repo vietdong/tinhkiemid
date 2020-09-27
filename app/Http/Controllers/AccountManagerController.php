@@ -194,7 +194,7 @@ class AccountManagerController extends Controller
         if(!$this->checkOtp($request->otp)){
             return redirect()->route('change.question')->with('check',"Mã OTP không đúng!");
         }
-        $user = $this->userRepository->where('secret_question_id',$request->question)->where('answer',$request->answer)->get();
+        $user = $this->userRepository->getModel()::where('secret_question_id',$request->question)->where('answer',$request->answer)->get();
         if($user){
             $input = [
                 'cmnd' => $request->cmnd,
